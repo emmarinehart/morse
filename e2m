@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+#emma = . -- -- .-
+
+char2morse = {
+  a: "*-",
+  m: "--",
+  e: "*",
+}
+
+input = STDIN.read
+
+input.each_char do |c|
+  print char2morse[c.to_sym] || c
+  print " "
+end
